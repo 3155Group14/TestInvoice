@@ -36,6 +36,8 @@ class Invoice:
         return round(productDiscounted, 2)
 
     # Second new function - Test if we can calculate the taxed price of the totalPurePrice.
+    # This is assuming a static tax rate of 7%.
+    # This builds from one of the previous functions.
     def totalPurePriceTaxed(self, products):
         total_pure_price = self.totalImpurePrice(products) - self.totalDiscount(products)
         total_pure_price_taxed = total_pure_price + (total_pure_price * .07)
